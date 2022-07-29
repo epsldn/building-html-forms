@@ -1,0 +1,61 @@
+#choose-language {
+    margin: 0;
+}
+
+
+@media screen and (min-width:700px) {
+    #container {
+        display: grid;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    form {
+        width: 700px;
+    }
+
+    #add-user-form {
+        display: grid;
+        grid-template-columns: 175px 3fr;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+        row-gap: .5em;
+
+    }
+
+
+
+    #submit {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+
+    .checkboxes-container {
+        grid-column: 1 / 3;
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+@media screen and (max-width:699px) {
+    form {
+        min-width: 350px;
+    }
+
+    #add-user-form {
+        display: grid;
+        row-gap: .5em;
+    }
+
+    #languages-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .languages {
+        display: inline;
+        justify-self: center;
+    }
+}

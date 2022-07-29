@@ -5,56 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Building HTML Forms</title>
 </head>
 
-<body>
-    <form method="post">
+<body id="container">
+    <form action="./fakelink" method="post">
         <fieldset>
             <legend>Add User</legend>
+            <div id="add-user-form">
+                <!-- Single line text input for first name -->
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name">
 
-            <!-- Single line text input for first name -->
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first_name">
+                <!-- Single line text input for last name -->
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name">
 
-            <!-- Single line text input for last name -->
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last_name">
+                <!-- Single line text input for email -->
+                <label for="email">What's your email?</label>
+                <input type="email" id="email" name="user_email">
 
-            <!-- Single line text input for email -->
-            <label for="email">What's your email?</label>
-            <input type="email" id="email" name="user_email">
+                <!-- Drop down menu for user status -->
+                <label for="status">Status</label>
+                <select name="user_status" id="status">
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="guest">Guest</option>
+                </select>
 
-            <!-- Drop down menu for user status -->
-            <label for="status">Status</label>
-            <select name="user_status" id="status">
-                <option value="student">Student</option>
-                <option value="teacher">Teacher</option>
-                <option value="guest">Guest</option>
-            </select>
+                <!-- Radio Button to choose favorite programming lanugage -->
+                <div>
+                    <p id="choose-language">Choose your favorite programming language:</p>
+                </div>
+                <div id="languages-container">
+                    <div class="languages">
+                        <label for="html">HTML</label>
+                        <input type="radio" name="language" id="html">
+                    </div>
+                    <div class="languages">
+                        <label for="css">CSS</label>
+                        <input type="radio" name="language" id="css">
+                    </div>
+                    <div class="languages">
+                        <label for="js">JavaScript</label>
+                        <input type="radio" name="language" id="js">
+                    </div>
+                </div>
 
-            <!-- Radio Button to choose favorite programming lanugage -->
-            <p>Choose your favorite programming language:</p>
-            <label for="html">HTML</label>
-            <input type="radio" name="language" id="html">
-            <label for="css">CSS</label>
-            <input type="radio" name="language" id="css">
-            <label for="js">JavaScript</label>
-            <input type="radio" name="language" id="js">
+                <!-- Comments section -->
+                <label for="comment">Comments</label>
+                <textarea name="user_comment" id="comment"></textarea>
 
-            <!-- Comments section -->
-            <label for="comment">Comments</label>
-            <textarea name="user_comment" id="comment"></textarea>
+                <label for="date">Current Date</label>
+                <input type="date" name="current_date" id="date">
 
-            <label for="date">Current Date</label>
-            <input type="date" name="current_date" id="date">
-
-            <!-- Checkboxe for terms and newsletter -->
-            <label for="newsletter">Sign up for newsletter</label>
-            <input type="checkbox" name="newsletter_button" id="newsletter">
-            <label for="agree">Agree to terms and conditions</label>
-            <input type="checkbox" name="agree_button" id="agree">
-
+                <!-- Checkboxes for terms and newsletter -->
+                <div class="checkboxes-container">
+                    <div>
+                        <label for="newsletter">Sign up for newsletter</label>
+                        <input type="checkbox" name="newsletter_button" id="newsletter">
+                    </div>
+                    <div>
+                        <label for="agree">Agree to terms and conditions</label>
+                        <input type="checkbox" name="agree_button" id="agree">
+                    </div>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" id="submit">Submit</button>
+            </div>
         </fieldset>
     </form>
 </body>
